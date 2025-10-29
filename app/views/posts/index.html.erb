@@ -2,7 +2,7 @@
     <h1>MEMBERS ONLY</h1>
     <% if member_signed_in? %>
         <p><%= link_to "Create post", new_post_path %></p>
-        <p><%= link_to "Log out", destroy_member_session_path %></p>
+        <p><%= button_to "Log out", destroy_member_session_path, method: :delete %></p>
     <% else %>
         <p><%= link_to "Sign in", new_member_session_path %></p>
     <% end %>

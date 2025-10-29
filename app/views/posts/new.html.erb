@@ -1,0 +1,6 @@
+<h1>MEMBERS ONLY</h1>
+
+<%= form_with model: @post do |form| %>
+    <div><%= form.text_area :content, placeholder: "What's happening" %></div>
+    <%= form.submit %>
+<% end %>
