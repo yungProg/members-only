@@ -1,0 +1,14 @@
+<header>
+    <h1>MEMBERS ONLY</h1>
+    <% if member_signed_in? %>
+        <p><%= link_to "Create post", new_post %></p>
+        <p><%= link_to "Log out", destroy_member_session %></p>
+    <% else %>
+        <p><%= link_to "Sign in", new_member_session_path %></p>
+    <% end %>
+</header>
+
+<% @posts.each do |post| %>
+    <h3><%= post.member.member_name if member_signed_in? %></h3>
+    <p><%= post.content %></p>
+<% end %>
