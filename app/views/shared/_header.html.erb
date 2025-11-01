@@ -1,0 +1,12 @@
+<header>
+    <h1><%= link_to "MEMBERS ONLY", root_url %></h1>
+    <ul class="user_login">
+        <% if member_signed_in? %>
+            <li><%= link_to "Create post", new_post_path %></li>
+            <li><%= button_to "Sign out", destroy_member_session_path, method: :delete %></li>
+        <% else %>
+            <li><%= link_to "Login", new_member_session_path %></li>
+            <li class="s-up"><%= link_to "Sign up", new_member_registration_path %></li>
+        <% end %>
+    </ul>
+</header>

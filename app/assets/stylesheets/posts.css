@@ -1,0 +1,42 @@
+.post-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.post-container:not(:last-child) {
+    border-bottom: 1px solid #afafaf;
+}
+
+
+.post p {
+    font-size: 1.2rem;
+    margin-top: 8px;
+}
+
+.post-container ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.post-container li:hover {
+    cursor: pointer;
+}
+
+textarea {
+    width: 500px;
+    height: 200px;
+    font-size: 1.2rem;
+    padding: 8px;
+}
+
+.new-post-submit input {
+    background-color: #3e5eee;
+}
+
+.new-post-submit a {
+    background-color: red;
+}

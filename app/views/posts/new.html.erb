@@ -1,6 +1,10 @@
-<h1>MEMBERS ONLY</h1>
-
-<%= form_with model: @post do |form| %>
-    <div><%= form.text_area :content, placeholder: "What's happening" %></div>
-    <%= form.submit %>
-<% end %>
+<div class="create-post"><%= render "shared/header" %></div>
+<div class="new-post-container">
+    <%= form_with model: @post do |form| %>
+        <div><%= form.text_area :content, placeholder: "What's happening" %></div>
+        <div class="new-post-submit">
+            <%= form.submit %>
+            <%= link_to "Cancel", root_url %>
+        </div>
+    <% end %>
+</div>

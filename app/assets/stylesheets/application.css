@@ -8,3 +8,79 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: sticky;
+    top: 0px;
+    background-color: #fff;
+}
+
+header h1 a {
+    color: black;
+    background: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.2rem;
+}
+
+header a, .new-post-submit a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #3e5eee;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.new-post-submit input,
+header button {
+    color: #fff;
+    background-color: red;
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.create-post ul {
+    display: none;
+}
+
+.s-up a {
+    color: #3e5eee;
+    background-color: inherit;
+    border: 1px solid #3e5eee;
+}
